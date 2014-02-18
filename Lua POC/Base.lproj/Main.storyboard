@@ -1,21 +1,173 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="LPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pl4-7l-aSa"/>
+                        <viewControllerLayoutGuide type="bottom" id="dna-bA-i4G"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7G-Ef-LUE">
+                                <rect key="frame" x="0.0" y="462" width="320" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-qv-hNb">
+                                        <rect key="frame" x="20" y="58" width="280" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="custom"/>
+                                            <segment title="script1"/>
+                                            <segment title="script2"/>
+                                            <segment title="script3"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="selectScript:" destination="vXZ-lx-hvc" eventType="valueChanged" id="g21-77-Pb2"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w68-tn-ZBH">
+                                        <rect key="frame" x="20" y="20" width="33" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startStop" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jAn-qa-FLp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNo-jH-nO6">
+                                        <rect key="frame" x="140" y="20" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Script">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="f6q-97-fZ9" kind="modal" identifier="Script" id="fZ4-sA-VMI"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7L-qV-RR0">
+                                        <rect key="frame" x="246" y="20" width="54" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Custom">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="custom" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hTL-8w-8sJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="HcX-qv-hNb" firstAttribute="leading" secondItem="A7G-Ef-LUE" secondAttribute="leading" constant="20" id="5YI-C6-eoY"/>
+                                    <constraint firstAttribute="bottom" secondItem="HcX-qv-hNb" secondAttribute="bottom" constant="20" id="5jm-vV-fYR"/>
+                                    <constraint firstItem="HcX-qv-hNb" firstAttribute="top" secondItem="j7L-qV-RR0" secondAttribute="bottom" constant="8" id="69t-Sf-mA4"/>
+                                    <constraint firstItem="w68-tn-ZBH" firstAttribute="leading" secondItem="A7G-Ef-LUE" secondAttribute="leading" constant="20" id="DDU-e2-fgL"/>
+                                    <constraint firstAttribute="trailing" secondItem="HcX-qv-hNb" secondAttribute="trailing" constant="20" id="UvM-Rb-vvu"/>
+                                    <constraint firstAttribute="centerX" secondItem="rNo-jH-nO6" secondAttribute="centerX" id="anC-pQ-ulx"/>
+                                    <constraint firstAttribute="height" constant="106" id="eBK-2t-Lan"/>
+                                    <constraint firstAttribute="trailing" secondItem="j7L-qV-RR0" secondAttribute="trailing" constant="20" id="hp6-7K-7uC"/>
+                                    <constraint firstItem="HcX-qv-hNb" firstAttribute="top" secondItem="rNo-jH-nO6" secondAttribute="bottom" constant="8" id="rWX-V7-QKV"/>
+                                    <constraint firstItem="HcX-qv-hNb" firstAttribute="top" secondItem="w68-tn-ZBH" secondAttribute="bottom" constant="8" id="u5Y-NF-HDJ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lua!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMi-LC-hQB">
+                                <rect key="frame" x="143" y="274" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A7G-Ef-LUE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="MwI-yF-H0Z"/>
+                            <constraint firstItem="dna-bA-i4G" firstAttribute="top" secondItem="A7G-Ef-LUE" secondAttribute="bottom" id="Z8l-6P-8bl"/>
+                            <constraint firstAttribute="centerY" secondItem="BMi-LC-hQB" secondAttribute="centerY" id="ZR3-Dl-ze9"/>
+                            <constraint firstAttribute="trailing" secondItem="A7G-Ef-LUE" secondAttribute="trailing" id="cX8-Pe-ffZ"/>
+                            <constraint firstAttribute="centerX" secondItem="BMi-LC-hQB" secondAttribute="centerX" id="guJ-Ag-g5V"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customButton" destination="j7L-qV-RR0" id="Emh-OY-PGl"/>
+                        <outlet property="scriptButton" destination="rNo-jH-nO6" id="N7J-fs-Vqf"/>
+                        <outlet property="scriptControl" destination="HcX-qv-hNb" id="jef-to-xGR"/>
+                        <outlet property="startStopButton" destination="w68-tn-ZBH" id="bba-qJ-5wO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Script View Controller-->
+        <scene sceneID="mzX-59-E9P">
+            <objects>
+                <viewController id="f6q-97-fZ9" customClass="LPScriptViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cWT-EQ-0Uh"/>
+                        <viewControllerLayoutGuide type="bottom" id="JI3-Gj-4ZF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rDh-71-hsC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhZ-zS-gZC">
+                                <rect key="frame" x="0.0" y="58" width="320" height="510"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="f6q-97-fZ9" id="g4q-U7-yUN"/>
+                                </connections>
+                            </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWb-hC-Dms">
+                                <rect key="frame" x="252" y="20" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="f6q-97-fZ9" eventType="touchUpInside" id="wOE-4e-AJK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knI-J9-o9V">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="f6q-97-fZ9" eventType="touchUpInside" id="CHi-bR-OOP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JI3-Gj-4ZF" firstAttribute="top" secondItem="IhZ-zS-gZC" secondAttribute="bottom" id="IYi-Jy-V1r"/>
+                            <constraint firstAttribute="trailing" secondItem="IhZ-zS-gZC" secondAttribute="trailing" id="MNv-Jp-J6Y"/>
+                            <constraint firstItem="IhZ-zS-gZC" firstAttribute="leading" secondItem="rDh-71-hsC" secondAttribute="leading" id="NcT-1U-1tG"/>
+                            <constraint firstItem="IhZ-zS-gZC" firstAttribute="top" secondItem="rDh-71-hsC" secondAttribute="top" constant="58" id="i3e-J0-liM"/>
+                            <constraint firstItem="knI-J9-o9V" firstAttribute="top" secondItem="cWT-EQ-0Uh" secondAttribute="bottom" id="mI8-aV-TUn"/>
+                            <constraint firstItem="knI-J9-o9V" firstAttribute="leading" secondItem="rDh-71-hsC" secondAttribute="leading" constant="20" id="nWa-vX-X1N"/>
+                            <constraint firstItem="RWb-hC-Dms" firstAttribute="top" secondItem="cWT-EQ-0Uh" secondAttribute="bottom" id="tyR-hi-zur"/>
+                            <constraint firstAttribute="trailing" secondItem="RWb-hC-Dms" secondAttribute="trailing" constant="20" id="vef-sc-JQc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="RWb-hC-Dms" id="ejz-8M-JA1"/>
+                        <outlet property="scriptView" destination="IhZ-zS-gZC" id="ko6-ho-uvh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85K-hq-uoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="-23"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
