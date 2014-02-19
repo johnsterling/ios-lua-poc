@@ -60,6 +60,7 @@
 		3BAB0D8118AF47BF00B6F42F /* script3.lua in Resources */ = {isa = PBXBuildFile; fileRef = 3BAB0D7D18AF47BF00B6F42F /* script3.lua */; };
 		3BAB0D8518B25E0300B6F42F /* LPLuaTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB0D8418B25E0300B6F42F /* LPLuaTimer.m */; };
 		3BAB0D8818B2709700B6F42F /* LPScriptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB0D8718B2709700B6F42F /* LPScriptViewController.m */; };
+		3BF6082018B5046F00267706 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3BF6081F18B5046F00267706 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,7 @@
 		3BAB0D8418B25E0300B6F42F /* LPLuaTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPLuaTimer.m; sourceTree = "<group>"; };
 		3BAB0D8618B2709700B6F42F /* LPScriptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPScriptViewController.h; sourceTree = "<group>"; };
 		3BAB0D8718B2709700B6F42F /* LPScriptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPScriptViewController.m; sourceTree = "<group>"; };
+		3BF6081F18B5046F00267706 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 		3BAB0CAD18AF321E00B6F42F = {
 			isa = PBXGroup;
 			children = (
+				3BF6081F18B5046F00267706 /* README.md */,
 				3BAB0CEE18AF32D000B6F42F /* lua-5.2.3 */,
 				3BAB0CBF18AF321E00B6F42F /* Lua POC */,
 				3BAB0CDE18AF321E00B6F42F /* Lua POCTests */,
@@ -470,6 +473,7 @@
 				3BAB0CD218AF321E00B6F42F /* Images.xcassets in Resources */,
 				3BAB0D7F18AF47BF00B6F42F /* script1.lua in Resources */,
 				3BAB0CC418AF321E00B6F42F /* InfoPlist.strings in Resources */,
+				3BF6082018B5046F00267706 /* README.md in Resources */,
 				3BAB0D8118AF47BF00B6F42F /* script3.lua in Resources */,
 				3BAB0D8018AF47BF00B6F42F /* script2.lua in Resources */,
 				3BAB0CCD18AF321E00B6F42F /* Main.storyboard in Resources */,
