@@ -21,7 +21,7 @@ The basic structure of this demo is:
 			- Property indicating animation state
 		- `viewController:`
 			- Property for setting the view controller that will be animated
-	- It exposes this API to its child LPLogicController:
+	- It exposes this API to its child `LPLogicController`:
 		- `-setBackgroundColorRed:blue:green:`
 - `LPLogicController` is the wrapper for the Lua context
 	- Its function is to provide the logic, in this case colors and timing for the view background color
