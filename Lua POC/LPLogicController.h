@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Volar Video. All rights reserved.
 //
 
+// This is the wrapper for the core logic. It owns a Lua context
+
 #import <Foundation/Foundation.h>
 
 @class LPAnimController;

@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Volar Video. All rights reserved.
 //
 
+// This is the primary app-facing API class
+
 #import <Foundation/Foundation.h>
 
 @interface LPAnimController : NSObject

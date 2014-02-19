@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Volar Video. All rights reserved.
 //
 
+// This is an NSTimer wrapper that can be access by Lua
+
 #import <Foundation/Foundation.h>
 #include "lua.h"
 

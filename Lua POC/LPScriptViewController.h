@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Volar Video. All rights reserved.
 //
 
+// This is the view controller for the Lua source view
+
 #import <UIKit/UIKit.h>
 #import "LPViewController.h"
 

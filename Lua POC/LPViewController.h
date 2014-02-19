@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Volar Video. All rights reserved.
 //
 
+// This is the view controller for the main Lua POC view
+
 #import <UIKit/UIKit.h>
 #import "LPAnimController.h"
 
